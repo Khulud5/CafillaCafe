@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Yatra+One&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family:"Lora", serif;
+    
+}
+
+#navbar img{ /*اللوقو*/
+    width: 80px;
+    margin-left: 20px;
+    height: 50px;
+}
+
+#navbar * {
+    margin-top: 7px;
+
+}
+
+#navbar{
+    display: flex; /*اخليهم جمب بعض*/
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#navbar nav ul{
+    list-style: none; /* شلت نقاط التعداد*/
+    display: flex;
+    margin-right: 100px;
+
+}
+#navbar nav ul li:hover{
+    transform: scale(0.9); /*لتصغير الكلمة*/
+}
+a{
+    text-decoration: none; /* شلت الخط اللي تحت العناوين*/
+}
+
+#navbar ul li a{ 
+    padding: 15px 20px; 
+    /*15: فوق وتحت */
+    /*20: جوانب*/
+    color: white;
+    font-weight: 500;
+}
+#navbar ul li a:hover{
+    border-bottom: 2px solid rgb(186, 103, 25);
+}
+
+header .content{ /*الكلام الترحيبي كامل .. */
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+    color:#fff;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: welcome 2s forwards;
+}
+@keyframes welcome{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+header h1{/*welcome.. */
+    font-size:40px ;
+}
+header h3{ /*freshly..*/
+    max-width: 20px 0 40px;
+    font-family: "Roboto Mono", monospace;
+}
+.container{
+    max-width: 1100px;
+    margin:auto;
+}
+/*utility classes*/
+
+.primary-text{/*cafilla cafe*/
+    color: rgb(237, 100, 47);
+}
+
+.btn{ /*size button*/
+    display: inline-block;
+    padding: 10px 30px;
+    border: none;
+    border-style:15px ;
+}
+
+.btn-primary{
+    color:rgb(237, 100, 47);
+    border: 1px solid;
+    border-radius: 15px;
+    
+}
+.btn:hover{
+    color: rgb(252, 250, 249);
+    background-color: rgba(237, 101, 47, 0.355);
+    transform: scale(0.9);
+}
+.btn-secondary{
+    color:rgb(237, 100, 47);
+    border: 1px solid;
+    border-radius: 15px;
+    
+    margin: 30px 0px 30px 370px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: btn 1s forwards;
+    animation-delay: 0.5s;
+}
+@keyframes btn{
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*header start*/
+header{
+    height: 100vh;
+    background: url('./images/back2.jpg') center center/cover no-repeat;
+    position: relative;
+}
+
+header::before{/* اضافى عنصر وهمي*/
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.726);
+}
+header *{ /*اخلي الكتابة وكل شيء فوق التعتيم*/
+    z-index: 10;
+} 
+#about{/*back ground page2*/
+    height: 180vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url(./images/back3.svg) center center/cover no-repeat ;
+    position: relative;
+}
+#about:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background:  rgba(0, 0, 0, 0.481);
+}
+#about .title{
+    text-align: center;
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: about 1s forwards;
+    animation-delay: 0s;
+}
+@keyframes about{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#about h2{
+    font-size: 40px;
+    color:rgb(237, 100, 47);
+    margin-bottom: 20px;
+}
+#about .title p{
+    font-size: 15px;
+    color: #dd9569;
+    font-weight: 600;
+    margin-bottom: 0%;
+}
+#about .about-content{
+    display:flex;
+    flex-wrap:wrap; /*يخلي العناصر تنتقل للسطر الثاني تلقائي اذا ماكان في مساحة كافية*/ 
+    gap:20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+}
+#about .about-content p{
+    color: #fff;
+    font-family:"Lora", serif;
+    margin-right: 7rem;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px;
+}
+#hr2{
+    margin-top: 20px;
+    width: 300px;
+    margin: 10px auto 30px; /*top  left/right   bottom*/
+    background-color: #ff995a5c;
+
+}
+hr {
+  border: none;
+  height: 0.7px;
+  background-color: #ff995a;
+}
+.gallery{
+  display:flex;
+  gap:20px;
+}
+
+
+.gallery img{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top:10px ;
+}
+
+
+.img1{
+    opacity: 0;
+    transform: translateY(50px);
+    animation:img1 1s forwards ;
+    animation-delay: 1s;
+    box-shadow:0em 0px 9px #c5a18a75 ;
+}
+@keyframes img1{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.img2 {
+    opacity: 0;
+    transform: translateY(50px);
+    animation:img2 1s forwards ;
+    animation-delay: 1s;
+    box-shadow:0em 0px 9px #c5a18a75 ; 
+
+}
+@keyframes img2{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.img3 {
+    margin-right:10px ;
+    opacity: 0;
+    transform: translateY(50px);
+    animation:img3 1s forwards ;
+    animation-delay: 1s;
+    box-shadow:0em 0px 9px #c5a18a75 ;
+}
+@keyframes img3{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+#about .about-content p{
+    opacity: 0; 
+    transform: translateY(50px);
+    animation: history 1s forwards; 
+    text-shadow:0 4px 8px #dd9569;
+    animation-delay: 0.5s;
+    line-height: 1.9; /*مسافة بين السطور*/
+}
+@keyframes history{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        text-shadow: none;
+    }
+}
+
+
+@media (max-width:768px){
+    #about {
+        height: auto;
+        padding: 40px 20px;
+        background: url(./images/back3.svg) center center/cover no-repeat;
+    }
+    #about .about-content p {
+        margin: 0 0 10px 0;
+        padding: 0 50px;
+        font-size: 15px;
+    }
+    .gallery{
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery img{
+        width: 80%;
+        height: auto;
+    }
+    .img2{
+        margin-top: 5px;
+    }
+    .img3{
+        margin-top: 5px;
+        margin-left: 11px;
+    }
+    .btn-secondary{
+      margin: 10px 50px 30px 140px;
+    }
+    .content h1 {
+        padding: 10px 40px;
+        font-size: 50px;
+        margin-top: 30px;
+        margin-bottom: 1px;
+    }
+    .content h3{
+        margin-bottom: 5px;
+        
+        
+        
+    }
+}
