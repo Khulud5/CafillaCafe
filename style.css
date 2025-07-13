@@ -7,6 +7,16 @@
 }
 body{
     font-family:"Lora", serif;
+    .hidden-text{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+#toggle:checked~ .hidden-text{
+    max-height: 500px;
+    opacity: 1;
+}
     
 }
 
@@ -288,7 +298,14 @@ hr {
     }
 }
 
-.hidden-text{
+
+@media (max-width:768px){
+    #about {
+        height: auto;
+        padding: 40px 20px;
+        background: url(./images/back3.svg) center center/cover no-repeat;
+    }
+    .hidden-text{
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -298,12 +315,6 @@ hr {
     max-height: 500px;
     opacity: 1;
 }
-@media (max-width:768px){
-    #about {
-        height: auto;
-        padding: 40px 20px;
-        background: url(./images/back3.svg) center center/cover no-repeat;
-    }
     #about .about-content p {
         margin: 0 0 10px 0;
         padding: 0 50px;
