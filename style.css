@@ -288,7 +288,16 @@ hr {
     }
 }
 
-
+.hidden-text{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+#toggle:checked~ .hidden-text{
+    max-height: 500px;
+    opacity: 1;
+}
 @media (max-width:768px){
     #about {
         height: auto;
