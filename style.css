@@ -1,209 +1,259 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Comic+Relief&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Winky+Rough:ital,wght@0,300..900;1,300..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
 
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-body{
-    font-family:"Lora", serif;
-    .hidden-text{
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
+
+body {
+    font-family: "Lora", serif;
+
+    .hidden-text {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #toggle:checked~.hidden-text {
+        max-height: 500px;
+        opacity: 1;
+    }
 }
-#toggle:checked~ .hidden-text{
-    max-height: 500px;
-    opacity: 1;
-}
-}
-#navbar img{ /*اللوقو*/
+
+#navbar img {
+    /*اللوقو*/
     width: 80px;
     margin-left: 20px;
     height: 50px;
 }
+
 #navbar * {
     margin-top: 7px;
 }
-#navbar{
-    display: flex; /*اخليهم جمب بعض*/
+
+#navbar {
+    display: flex;
+    /*اخليهم جمب بعض*/
     justify-content: space-between;
     align-items: center;
 }
-#navbar nav ul{
-    list-style: none; /* شلت نقاط التعداد*/
+
+#navbar nav ul {
+    list-style: none;
+    /* شلت نقاط التعداد*/
     display: flex;
     margin-right: 100px;
 
 }
-#navbar nav ul li:hover{
-    transform: scale(0.9); /*لتصغير الكلمة*/
+
+#navbar nav ul li:hover {
+    transform: scale(0.9);
+    /*لتصغير الكلمة*/
 }
-a{
-    text-decoration: none; /* شلت الخط اللي تحت العناوين*/
+
+a {
+    text-decoration: none;
+    /* شلت الخط اللي تحت العناوين*/
 }
-#navbar ul li a{ 
-    padding: 15px 20px; 
+
+#navbar ul li a {
+    padding: 15px 20px;
     /*15: فوق وتحت */
     /*20: جوانب*/
     color: white;
     font-weight: 500;
 }
-#navbar ul li a:hover{
+
+#navbar ul li a:hover {
     border-bottom: 2px solid rgb(186, 103, 25);
 }
-header .content{ /*الكلام الترحيبي كامل .. */
+
+header .content {
+    /*الكلام الترحيبي كامل .. */
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
-    align-items:center;
-    height:100vh;
-    color:#fff;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
     opacity: 0;
     transform: translateY(50px);
     animation: welcome 2s forwards;
 }
-@keyframes welcome{
-    to{
+
+@keyframes welcome {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-header h1{/*welcome.. */
-    font-size:40px ;
+
+header h1 {
+    /*welcome.. */
+    font-size: 40px;
 }
-header h3{ /*freshly..*/
+
+header h3 {
+    /*freshly..*/
     max-width: 20px 0 40px;
     font-family: "Roboto Mono", monospace;
 }
-.btn{ /*size button*/
+
+.btn {
+    /*size button*/
     display: inline-block;
     padding: 10px 30px;
     border: none;
-    border-style:15px ;
+    border-style: 15px;
 }
-.btn-primary{
-    color:rgb(237, 100, 47);
+
+.btn-primary {
+    color: rgb(237, 100, 47);
     border: 1px solid;
     border-radius: 15px;
 }
-.btn:hover{
+
+.btn:hover {
     color: rgb(252, 250, 249);
     background-color: rgba(237, 101, 47, 0.355);
     transform: scale(0.9);
 }
-.primary-text{/*cafilla cafe*/
+
+.primary-text {
+    /*cafilla cafe*/
     color: rgb(237, 100, 47);
 }
+
 /*=================== footer ====================*/
-.footer1, .footer2, .footer3 {
+.footer1,
+.footer2,
+.footer3 {
     background-color: rgb(115, 43, 14);
     color: #fff;
     display: flex;
     justify-content: space-between;
     padding-left: 15px;
     padding-right: 15px;
-    height:30px ;
+    height: 30px;
     align-items: center;
-    font-family:  "Roboto Mono", monospace;
-    
+    font-family: "Roboto Mono", monospace;
+
 }
 
 /*===================== page 2 =========================*/
-.container{
+.container {
     max-width: 1100px;
-    margin:auto;
+    margin: auto;
 }
-.btn-secondary{
-    color:rgb(237, 100, 47);
+
+.btn-secondary {
+    color: rgb(237, 100, 47);
     border: 1px solid;
     border-radius: 15px;
-    margin: 30px 300px 30px 300px; 
-        /* top  right  bottom  left*/
+    margin: 30px 300px 30px 300px;
+    /* top  right  bottom  left*/
     opacity: 0;
     transform: translateY(50px);
     animation: btn 1s forwards;
     animation-delay: 0.5s;
 }
-@keyframes btn{
-    to{
+
+@keyframes btn {
+    to {
         opacity: 1;
         transform: translateX(0);
     }
 }
+
 /*header start*/
-header{
+header {
     height: 100vh;
     background: url('./images/back2.jpg') center center/cover no-repeat;
     position: relative;
 }
-header::before{/* اضافى عنصر وهمي*/
+
+header::before {
+    /* اضافى عنصر وهمي*/
     content: "";
     position: absolute;
-    top:0;
-    left:0;
-    height:100%;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.726);
 }
-header *{ /*اخلي الكتابة وكل شيء فوق التعتيم*/
+
+header * {
+    /*اخلي الكتابة وكل شيء فوق التعتيم*/
     z-index: 10;
-} 
-#about{/*back ground page2*/
+}
+
+#about {
+    /*back ground page2*/
     height: 180vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:url(./images/back3.svg) center center/cover no-repeat ;
+
+    background: url(./images/back3.svg) center center/cover no-repeat;
     position: relative;
 }
-#about:before{
+
+#about:before {
     content: "";
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
-    background:  rgba(0, 0, 0, 0.596);
+    background: rgba(0, 0, 0, 0.596);
 }
-#about .title{
+
+#about .title {
     text-align: center;
-    margin-bottom: 4rem;
-  /*  margin-top: 0rem;*/
+    margin-bottom: 3rem;
     opacity: 0;
     transform: translateY(50px);
     animation: about 1s forwards;
     animation-delay: 0s;
 }
-@keyframes about{
-    to{
+
+@keyframes about {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-#about h2{ /*the cafilla history*/
-    font-size: 40px;
-    color:rgb(237, 100, 47);
-    margin-bottom: 20px;
+
+#about h2 {
+    /*the cafilla history*/
+    font-size: 60px;
+    color: rgb(237, 100, 47);
+    padding-top: 90px;
+    font-family: "Cabin Sketch", sans-serif;
 }
-#about .title p{ /*more than 10 exp..*/
+
+#about .title p {
+    /*more than 10 exp..*/
     font-size: 15px;
     color: #dd9569;
     font-weight: 600;
     margin-bottom: 0%;
 }
-#about .about-content{
-    display:flex;
-    flex-wrap:wrap; /*يخلي العناصر تنتقل للسطر الثاني تلقائي اذا ماكان في مساحة كافية*/ 
-    gap:20px;
+
+#about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    /*يخلي العناصر تنتقل للسطر الثاني تلقائي اذا ماكان في مساحة كافية*/
+    gap: 20px;
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
 }
-#about .about-content p{ /*البرقراف*/
+
+#about .about-content p {
+    /*البرقراف*/
     color: #fff;
-    font-family:"Lora", serif;
+    font-family: "Lora", serif;
     margin-right: 7rem;
     font-weight: 500;
     line-height: 1.6;
@@ -211,205 +261,310 @@ header *{ /*اخلي الكتابة وكل شيء فوق التعتيم*/
     margin: 0 auto;
     max-width: 900px;
 }
-#hr2{ /*خط تحت الكلام*/
+
+#hr2 {
+    /*خط تحت الكلام*/
     margin-top: 20px;
     width: 300px;
-    margin: 10px auto 30px; /*top  left/right   bottom*/
+    margin: 10px auto 30px;
+    /*top  left/right   bottom*/
     background-color: #ff995a5c;
 }
-#hr2 { /*خط بين الصورتين*/
-  border: none;
-  height: 0.7px;
-  background-color: #ff995a;
+
+#hr2 {
+    /*خط بين الصورتين*/
+    border: none;
+    height: 0.7px;
+    background-color: #ff995a;
 }
+
 /*الصور*/
-.gallery{
-  display:flex;
-  gap:20px;
+.gallery {
+    display: flex;
+    gap: 20px;
 }
+
 .gallery img {
     width: 350px;
     height: 250px;
     object-fit: cover;
     border-radius: 5px;
 }
-.img1{
+
+.img1 {
     opacity: 0;
     transform: translateY(50px);
-    animation:img1 1s forwards ;
+    animation: img1 1s forwards;
     animation-delay: 1s;
-    box-shadow:0em 0px 9px #c5a18a75 ;
+    box-shadow: 0em 0px 9px #c5a18a75;
 }
-@keyframes img1{
-    to{
+
+@keyframes img1 {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 .img2 {
     opacity: 0;
     transform: translateY(50px);
-    animation:img2 1s forwards ;
+    animation: img2 1s forwards;
     animation-delay: 1s;
-    box-shadow:0em 0px 9px #c5a18a75 ; 
+    box-shadow: 0em 0px 9px #c5a18a75;
 }
-@keyframes img2{
-    to{
+
+@keyframes img2 {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-.img3{
+
+.img3 {
     width: 350px;
     height: 250px;
     object-fit: cover;
     border-radius: 5px;
 }
+
 .img3 {
-    margin-right:10px ;
+    margin-right: 10px;
     opacity: 0;
     transform: translateY(50px);
-    animation:img3 1s forwards ;
+    animation: img3 1s forwards;
     animation-delay: 1s;
-    box-shadow:0em 0px 9px #c5a18a75 ;
+    box-shadow: 0em 0px 9px #c5a18a75;
 }
-@keyframes img3{
-    to{
+
+@keyframes img3 {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-#about .about-content p{ /*التأثير للبرقراف*/
+
+#about .about-content p {
+    /*التأثير للبرقراف*/
     opacity: 0;
     transform: translateY(50px);
-    animation: history 1s forwards; 
-    text-shadow:0 4px 8px #dd9569;
+    animation: history 1s forwards;
+    text-shadow: 0 4px 8px #dd9569;
     animation-delay: 0.5s;
-    line-height: 1.9; /*مسافة بين السطور*/
+    line-height: 1.9;
+    /*مسافة بين السطور*/
 }
-@keyframes history{
-    to{
+
+@keyframes history {
+    to {
         opacity: 1;
         transform: translateY(0);
         text-shadow: none;
     }
 }
+
 /*=================== page 3 =========================*/
-.menu{
+.menu {
     max-width: 1100px;
     margin: auto;
 }
-#menuAll{
-    height: 100vh;
-    background: url(./images/page3-phone.svg) center center/cover no-repeat;
+
+#menuAll {
+    background: url(./images/page3-web.svg) center center/cover no-repeat;
     position: relative;
-    color:#fff
+    height: 800px;
 }
-#menuAll::before{
+
+#menuAll::before {
     content: "";
     position: absolute;
-    top:0;
-    left:0;
-    height:100%;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0,  0.153);
+    background: rgba(0, 0, 0, 0.153);
 }
-.text-menu{
-    color: rgb(237, 100, 47);
-    margin-left: 50px;
-}
-.menu h2{
-    margin-left:10px;
-    padding-top:50px;
-    font-size: 60px;
+
+.menu h2 {
+    color: #fff;
+    font-size: 80px;
     font-family: "Cabin Sketch", sans-serif;
+    text-align: center;
+    padding-top: 30px;
 }
-.IcedDrinks{
-    font-family: "Winky Rough", sans-serif;
-    color:#ffffffed;
-    margin-left: 20px;
-    line-height: 1.2;
+
+.mobile-break {
+    display: none;
 }
-.IcedDrinks h4{
-    margin-top:10px;
-  font-family: "Comic Relief", system-ui;
+
+.text-menu {
+    color: rgb(237, 100, 47);
+
 }
-#hr3, #hr4{
-    background-color: #fff;
-    width: 150px;
+
+.IcedDrinks {
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.9;
+    padding-left: 200px;
+    padding-top: 60px;
+    font-family: "Cabin Sketch", sans-serif;
+
+
 }
-.HotDrinks{
-    font-family: "Winky Rough", sans-serif;
-    color:#ffffffed;
-    margin-left: 150px;
-    margin-top: 50px;
-    line-height: 1.2;
+
+.HotDrinks h4,
+.IcedDrinks h4 {
+    font-family: "Cabin Sketch", sans-serif;
+
 }
-.HotDrinks h4{
-  font-family: "Comic Relief", system-ui;
-  margin-top: 10px;
+
+.HotDrinks {
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.9;
+    padding-left: 680px;
+    transform: translateY(-310px);
+    font-family: "Cabin Sketch", sans-serif;
+
+}
+
+#hr3,
+#hr4 {
+    width: 190px;
 }
 
 
 
 /* ============== for phone ==============================*/
-@media (max-width:480px ){
+@media (max-width:820px) {
     #about {
-        height: 800px;
+        height: auto;
         padding: 40px 20px;
         background: url(./images/page2-phone.svg) center center/cover no-repeat;
     }
-    #about::before{
-    content: "";
-    position: absolute;
-    top:0;
-    left:0;
-    height:100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.3);
+
+    #about h2 {
+        padding-top: 50px;
     }
-    .hidden-text{
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-}
-#toggle:checked~ .hidden-text{
-    max-height: 500px;
-    opacity: 1;
-}
+
+    #about::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .hidden-text {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #toggle:checked~.hidden-text {
+        max-height: 500px;
+        opacity: 1;
+    }
+
     #about .about-content p {
         margin: 0 0 10px 0;
         padding: 0 50px;
         font-size: 15px;
     }
-    .gallery{
+
+    .gallery {
         flex-direction: row;
         align-items: center;
     }
-    .gallery img{
+
+    .gallery img {
         width: 150px;
         height: 120px;
     }
-    .img3{
+
+    .img3 {
         display: none;
     }
+
     .content h1 {
         padding: 10px 40px;
         font-size: 50px;
         margin-top: 30px;
         margin-bottom: 1px;
     }
-    .content h3{
+
+    .content h3 {
         margin-bottom: 5px;
     }
-    .btn-secondary{
+
+    .btn-secondary {
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 10px;
         margin-top: 0px;
     }
-    #hr2{
+
+    #hr2 {
         width: 230px;
     }
+
+
+    #menuAll {
+        height: 100vh;
+        background: url(./images/page3-phone.svg) center center/cover no-repeat;
+        position: relative;
+        color: #fff
+    }
+
+
+
+    .text-menu {
+        color: rgb(237, 100, 47);
+        margin-left: 50px;
+    }
+
+    .menu h2 {
+        margin-left: 10px;
+        margin-right: 170px;
+
+        padding-top: 50px;
+        font-size: 60px;
+        font-family: "Cabin Sketch", sans-serif;
+    }
+
+    .IcedDrinks {
+        font-family: "Winky Rough", sans-serif;
+        color: #ffffffed;
+        margin-left: 20px;
+        line-height: 1.2;
+    }
+
+    .IcedDrinks h4 {
+        margin-top: 10px;
+        font-family: "Comic Relief", system-ui;
+    }
+
+    #hr3,
+    #hr4 {
+        background-color: #fff;
+        width: 150px;
+    }
+
+    .HotDrinks {
+        font-family: "Winky Rough", sans-serif;
+        color: #ffffffed;
+        margin-left: 150px;
+        margin-top: 50px;
+        line-height: 1.2;
+    }
+
+    .HotDrinks h4 {
+        font-family: "Comic Relief", system-ui;
+        margin-top: 10px;
+    }
+
 }
