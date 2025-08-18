@@ -447,7 +447,7 @@ header * {
 
 
 
-.footer4 {
+.contact {
     background-color: rgb(105, 44, 13);
     color: #fff;
     font-family: "Roboto Mono", monospace;
@@ -673,11 +673,12 @@ header * {
         padding-left: 10px;
         font-size: 14px;
     }
-    .footer4{
+    .contact{
         padding: 30px;
         font-size: 15px;
         background-color:  rgb(121, 37, 2);
 
     }
 }
+
 
