@@ -5,7 +5,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #141212;
+}
 body {
     font-family: "Lora", serif;
 
@@ -674,4 +678,5 @@ header * {
         font-size: 14px;
     }
 }
+
 
