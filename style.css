@@ -10,6 +10,7 @@ html, body{
     padding: 0;
     background-color: #141212;
 }
+
 body {
     font-family: "Lora", serif;
 
@@ -134,7 +135,7 @@ header h3 {
 .footer1,
 .footer2,
 .footer3 {
-    background-color: rgb(115, 43, 14);
+    background-color: rgb(83, 35, 10);
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -447,15 +448,10 @@ header * {
 
 
 .footer4 {
-    background-color: rgb(115, 43, 14);
+    background-color: rgb(105, 44, 13);
     color: #fff;
-    /*display: flex;
-    justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 300px;
-    align-items: center;*/
     font-family: "Roboto Mono", monospace;
+    padding:40px;
 
 }
 
@@ -677,6 +673,11 @@ header * {
         padding-left: 10px;
         font-size: 14px;
     }
-}
+    .footer4{
+        padding: 30px;
+        font-size: 15px;
+        background-color:  rgb(121, 37, 2);
 
+    }
+}
 
