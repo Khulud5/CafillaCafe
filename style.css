@@ -441,8 +441,16 @@ header * {
 
 /*=============================== page 4 ===================*/
 .sweet {
-    background: url(./images/page4-phone.svg);
-    height: 800px;
+    background: url(./images/page4-web.svg) center center/cover no-repeat;
+    height: 120vh;
+    position: relative;
+}
+.sweet h1{
+    color: #fff;
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 80px;
+    text-align: center;
+    padding-top: 25px;
 }
 
 
@@ -454,8 +462,37 @@ header * {
     padding:40px;
 
 }
+.sweet h1 span{
+    color: rgb(237, 100, 47);
+}
+.sweet {
+    color:#fff;
+    font-family: "Cabin Sketch", sans-serif;
 
+}
+.sweet hr{
+    width: 150px;
+}
 
+.sweet h3{
+    font-size: 30px;
+}
+.sweet h2{
+    font-size: 60px;
+
+}
+.cookies {
+    padding-left: 50px;
+    padding-top: 90px;
+} 
+.footerEnd
+{
+    padding: 30px;
+    font-size: 15px;
+    background-color:  rgb(172, 74, 21);
+    line-height: 1.6;
+
+}
 
 /* ============== for phone ==============================*/
 @media (max-width:767px) {
@@ -601,9 +638,13 @@ header * {
     }
 
     .sweet h1 {
-        font-size: 50px;
+        font-size: 45px;
 
     }
+  .sweet h2{
+    font-size: 24px;
+
+  }
 
     .cookies {
         padding-left: 145px;
@@ -638,7 +679,7 @@ header * {
     }
 
     .brow {
-        padding-top: 80px;
+        padding-top: 120px;
         padding-left: 155px;
         font-size: 20px;
     }
@@ -653,7 +694,7 @@ header * {
     }
 
     .extra {
-        padding-top: 100px;
+        padding-top: 130px;
     }
 
     .extra hr {
@@ -673,12 +714,15 @@ header * {
         padding-left: 10px;
         font-size: 14px;
     }
-    .contact{
-        padding: 30px;
-        font-size: 15px;
-        background-color:  rgb(121, 37, 2);
+.footerEnd
+{
+    padding: 30px;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.6;
+    background-color: rgb(172, 74, 21);
 
-    }
+}  
+   
 }
-
 
